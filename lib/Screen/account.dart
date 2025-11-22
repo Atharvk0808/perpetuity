@@ -46,7 +46,7 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 
-  // ------------------- NAV ICON -------------------
+  //  NAV ICON
   Widget _buildNavIcon(IconData icon, int index) {
     final theme = Theme.of(context);
     bool isSelected = selectedNavIndex == index;

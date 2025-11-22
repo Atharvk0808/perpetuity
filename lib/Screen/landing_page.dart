@@ -61,7 +61,7 @@ class _LandingPageState extends State<LandingPage>
     final double availableWidth = width - 65;
 
     return Scaffold(
-      backgroundColor: colors.background,  // 👈 Theme background
+      backgroundColor: colors.background,
       body: Stack(
         children: [
           SingleChildScrollView(
@@ -79,7 +79,7 @@ class _LandingPageState extends State<LandingPage>
                       style: TextStyle(
                         fontSize: width * 0.07,
                         fontWeight: FontWeight.w600,
-                        color: colors.black, // 👈 Theme text color
+                        color: colors.black,
                       ),
                     ),
                     const CircleAvatar(
@@ -286,13 +286,13 @@ class _LandingPageState extends State<LandingPage>
               ),
             ),
 
-            // ⭐ Responsive Image Section
+            //  Responsive Image Section
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18),
                 child: Image.asset(
                   image,
-                  fit: BoxFit.fill,   // ⭐ No distortion
+                  fit: BoxFit.fill,
                 ),
               ),
             ),

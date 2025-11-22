@@ -262,17 +262,17 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen>
                   SizedBox(height: height * 0.02),
                   SlideTransition(
                     position: anim1,
-                    child: _buildTeamCard(4, "Team 4", "2 Points", colors),
+                    child: _buildTeamCard(05, "Team 4", "2 Points", colors),
                   ),
                   SizedBox(height: height * 0.02),
                   SlideTransition(
                     position: anim2,
-                    child: _buildTeamCard(5, "Team 5", "2 Points", colors),
+                    child: _buildTeamCard(06, "Team 4", "2 Points", colors),
                   ),
                   SizedBox(height: height * 0.02),
                   SlideTransition(
                     position: anim3,
-                    child: _buildTeamCard(6, "Team 6", "2 Points", colors),
+                    child: _buildTeamCard(07, "Team 4", "2 Points", colors),
                   ),
                 ],
               ),
@@ -299,7 +299,7 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen>
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
-            color: colors.greenShade,
+            color: Colors.green,
             borderRadius: BorderRadius.circular(20),
           ),
           child: Text(points,
@@ -324,18 +324,34 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen>
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(team,
-                  style: GoogleFonts.poppins(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      color: colors.black)),
-              Text(rank,
-                  style: GoogleFonts.poppins(
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold,
-                      color: colors.black)),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  children: [
+                    Text(
+                      team,
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: colors.black,
+                      ),
+                    ),
+
+                    const SizedBox(height: 55),
+                    Text(
+                      rank,
+                      style: GoogleFonts.poppins(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                        color: colors.black,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+
             ],
           ),
         ),
@@ -347,14 +363,14 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
-        color: colors.greenShade.withOpacity(0.8),
+        color: colors.greenShade.withOpacity(0.5),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Row(
         children: [
           Text(rank.toString(),
               style: GoogleFonts.poppins(
-                  fontSize: 16,
+                  fontSize: 19,
                   fontWeight: FontWeight.w500,
                   color: colors.black)),
           const SizedBox(width: 15),
@@ -369,16 +385,18 @@ class _LeaderBoardScreenState extends State<LeaderBoardScreen>
                 Text(team,
                     style: GoogleFonts.poppins(
                         fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: colors.black)),
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,)),
                 Text(points,
                     style: GoogleFonts.poppins(
                         fontSize: 13,
-                        color: colors.black.withOpacity(0.7))),
+                        color: Colors.green,fontWeight: FontWeight.bold)),
               ],
             ),
           ),
-          Icon(Icons.keyboard_arrow_down, color: colors.black),
+          Icon(Icons.arrow_drop_down,
+            color: Colors.red ,
+            fontWeight: FontWeight.bold, )
         ],
       ),
     );

@@ -24,7 +24,6 @@ class SignIn1 extends StatelessWidget {
     return Scaffold(
       // backgroundColor: Colors.black,
       backgroundColor: colors.background,
-
       resizeToAvoidBottomInset: true,
       body: SingleChildScrollView(
         child: SizedBox(
